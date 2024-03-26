@@ -1,8 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors'); // Import the cors middleware
 
 const app = express();
 app.use(express.json());
+app.use(cors()); // Use cors middleware
 
 // Define Property Schema
 const propertySchema = new mongoose.Schema({
